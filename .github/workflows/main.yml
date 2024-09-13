@@ -12,17 +12,7 @@ jobs:
     name: Backend Test and Build
     runs-on: ubuntu-latest
 
-    services:
-      mongo:
-        image: mongo:latest
-        ports:
-          - 27017:27017
-        options: > 
-          --health-cmd "ping -c 1 localhost || exit 1" 
-          --health-interval 10s 
-          --health-timeout 5s 
-          --health-retries 5
-
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -38,8 +28,6 @@ jobs:
 
       - name: Run backend tests
         working-directory: ./backend
-        env:
-          MONGODB_URI: mongodb://localhost:27017/blockchain-audit
         run: npm test
 
       - name: Build backend
@@ -101,11 +89,11 @@ jobs:
       - name: Run Docker containers
         run: docker-compose -f docker-compose.yml up -d
 
-#      - name: Wait for services to be healthy
-#        run: sleep 15
+     - name: Wait for services to be healthy
+       run: sleep 15
 
-#      - name: Test Docker containers
-#        run: docker-compose -f docker-compose.yml exec app npm test
+     - name: Test Docker containers
+       run: docker-compose -f docker-compose.yml exec app npm test
 
-#      - name: Tear down Docker containers
-#        run: docker-compose -f docker-compose.yml down
+     - name: Tear down Docker containers
+       run: docker-compose -f docker-compose.yml down
