@@ -1,0 +1,48 @@
+{
+    "name": "frontend",
+    "version": "1.0.0",
+    "description": "Frontend for the Blockchain Audit Application",
+    "main": "index.js",
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject",
+      "lint": "eslint src/**/*.{js,jsx}",
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d build"
+    },
+    "dependencies": {
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-scripts": "^5.0.1",
+      "react-router-dom": "^6.9.0",
+      "axios": "^1.4.0"
+    },
+    "devDependencies": {
+      "eslint": "^8.50.0",
+      "eslint-plugin-react": "^7.34.0",
+      "gh-pages": "^4.0.0"
+    },
+    "eslintConfig": {
+      "extends": [
+        "react-app",
+        "react-app/jest"
+      ]
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "author": "Kashim Kyari",
+    "license": "MIT"
+  }
+  
