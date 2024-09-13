@@ -26,9 +26,8 @@ To install backend dependencies, navigate to the backend directory with `cd back
 
 Create a `.env` file in the `backend` directory with the following content:
 
-```plaintext
-MONGODB_URI=mongodb://localhost:27017/blockchain-audit
-PORT=5000  ```
+`MONGODB_URI=mongodb://localhost:27017/blockchain-audit
+PORT=5000`
 
 ## Running the Application
 
