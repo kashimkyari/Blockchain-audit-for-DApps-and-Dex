@@ -18,7 +18,7 @@ A blockchain audit application for decentralized apps and exchanges, built with 
 
 ## Installation
 
-Clone the repository using `git clone https://github.com/kashimkyari/blockchain-audit-app.git` and navigate to the project directory with `cd blockchain-audit-app`. Run the bash script to create the necessary directories and files: `bash create_structure.sh`.
+Clone the repository using `git clone https://github.com/kashimkyari/blockchain-audit-app.git` and navigate to the project directory with `cd blockchain-audit-app`. 
 
 To install backend dependencies, navigate to the backend directory with `cd backend` and run `npm install`. Then, navigate to the frontend directory with `cd ../frontend` and run `npm install` to install frontend dependencies.
 
