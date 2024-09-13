@@ -1,55 +1,49 @@
-/* Reset some default browser styles */
-* {
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
 }
 
-html, body {
-  height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f5f5f5;
+h1 {
   color: #333;
 }
 
-#root {
+form {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  align-items: center;
 }
 
-/* Global link styling */
-a {
-  text-decoration: none;
-  color: inherit;
+textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
-a:hover {
-  color: #007bff;
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-/* Basic container styles */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+button:hover {
+  background-color: #0056b3;
 }
 
-/* Utility classes */
-.text-center {
-  text-align: center;
-}
-
-.mt-4 {
-  margin-top: 1rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
-.p-4 {
-  padding: 1rem;
+pre {
+  background: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
 }

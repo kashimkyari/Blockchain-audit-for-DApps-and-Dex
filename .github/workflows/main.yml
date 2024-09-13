@@ -7,70 +7,70 @@ on:
     branches: [ main ]
 
 jobs:
-  # Commented out the backend test job
-  # backend-test:
-  #   name: Backend Test and Build
-  #   runs-on: ubuntu-latest
+  Commented out the backend test job
+  backend-test:
+    name: Backend Test and Build
+    runs-on: ubuntu-latest
 
-  #   services:
-  #     mongo:
-  #       image: mongo:latest
-  #       ports:
-  #         - 27017:27017
-  #       options: > 
-  #         --health-cmd "ping -c 1 localhost || exit 1" 
-  #         --health-interval 10s 
-  #         --health-timeout 5s 
-  #         --health-retries 5
+    services:
+      mongo:
+        image: mongo:latest
+        ports:
+          - 27017:27017
+        options: > 
+          --health-cmd "ping -c 1 localhost || exit 1" 
+          --health-interval 10s 
+          --health-timeout 5s 
+          --health-retries 5
 
-  #   steps:
-  #     - name: Checkout repository
-  #       uses: actions/checkout@v3
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-  #     - name: Set up Node.js
-  #       uses: actions/setup-node@v3
-  #       with:
-  #         node-version: '20'  # Explicitly set Node.js version
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'  # Explicitly set Node.js version
 
-  #     - name: Install backend dependencies
-  #       working-directory: ./backend
-  #       run: npm install
+      - name: Install backend dependencies
+        working-directory: ./backend
+        run: npm install
 
-  #     - name: Run backend tests
-  #       working-directory: ./backend
-  #       env:
-  #         MONGODB_URI: mongodb://localhost:27017/blockchain-audit
-  #       run: npm test
+      - name: Run backend tests
+        working-directory: ./backend
+        env:
+          MONGODB_URI: mongodb://localhost:27017/blockchain-audit
+        run: npm test
 
-  #     - name: Build backend
-  #       working-directory: ./backend
-  #       run: npm run build
+      - name: Build backend
+        working-directory: ./backend
+        run: npm run build
 
-  # Commented out the frontend test job
-  # frontend-test:
-  #   name: Frontend Test and Build
-  #   runs-on: ubuntu-latest
+  Commented out the frontend test job
+  frontend-test:
+    name: Frontend Test and Build
+    runs-on: ubuntu-latest
 
-  #   steps:
-  #     - name: Checkout repository
-  #       uses: actions/checkout@v3
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-  #     - name: Set up Node.js
-  #       uses: actions/setup-node@v3
-  #       with:
-  #         node-version: '20'  # Explicitly set Node.js version
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'  # Explicitly set Node.js version
 
-  #     - name: Install frontend dependencies
-  #       working-directory: ./frontend
-  #       run: npm install
+      - name: Install frontend dependencies
+        working-directory: ./frontend
+        run: npm install
 
-  #     - name: Run frontend tests
-  #       working-directory: ./frontend
-  #       run: npm test
+      - name: Run frontend tests
+        working-directory: ./frontend
+        run: npm test
 
-  #     - name: Build frontend
-  #       working-directory: ./frontend
-  #       run: npm run build
+      - name: Build frontend
+        working-directory: ./frontend
+        run: npm run build
 
   docker-build:
     name: Docker Build and Test
