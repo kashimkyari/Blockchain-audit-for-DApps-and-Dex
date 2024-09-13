@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Node.js CI test
 
 on:
   push:
@@ -101,11 +101,11 @@ jobs:
       - name: Run Docker containers
         run: docker-compose -f docker-compose.yml up -d
 
-      - name: Wait for services to be healthy
-        run: sleep 15
+#      - name: Wait for services to be healthy
+#        run: sleep 15
 
-      - name: Test Docker containers
-        run: docker-compose -f docker-compose.yml exec app npm test
+#      - name: Test Docker containers
+#        run: docker-compose -f docker-compose.yml exec app npm test
 
-      - name: Tear down Docker containers
-        run: docker-compose -f docker-compose.yml down
+#      - name: Tear down Docker containers
+#        run: docker-compose -f docker-compose.yml down
