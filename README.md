@@ -49,7 +49,7 @@ To run backend tests, navigate to the `backend` directory and use `npm test`. Fr
 The project includes a GitHub Actions configuration for continuous integration. Push changes to the `main` branch to trigger the pipeline.
 
 
-### `LICENSE`
+## LICENSE
 
 ```plaintext
 MIT License
